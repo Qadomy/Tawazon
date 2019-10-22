@@ -1,6 +1,8 @@
 package com.blue.tawazon;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -23,5 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
         // set the images in view pager
         viewPager.setAdapter(adapter);
+    }
+
+    public void openF(View view) {
+
+        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+        startActivity(intent);
     }
 }
