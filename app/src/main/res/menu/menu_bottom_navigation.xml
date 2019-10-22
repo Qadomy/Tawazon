@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home_icon"
+        android:checked="true"
+        android:icon="@drawable/ic_home"
+        android:title="home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/body_icon"
+        android:checked="true"
+        android:icon="@drawable/ic_body"
+        android:title="Body"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/meditation_icon"
+        android:checked="true"
+        android:icon="@drawable/ic_meditation"
+        android:title="Meditation"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/soul_icon"
+        android:checked="true"
+        android:icon="@drawable/ic_soul"
+        android:title="Soul"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/kids_icon"
+        android:checked="true"
+        android:icon="@drawable/ic_kids"
+        android:title="Kids"
+        app:showAsAction="ifRoom" />
+</menu>
