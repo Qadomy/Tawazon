@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#885C5C" />
@@ -44,9 +45,62 @@
             android:layout_marginTop="@dimen/five_dp"
             android:text="@string/breathe_and_start_again"
             android:textColor="@color/whiteColor"
-            android:textSize="25sp" />
+            android:textSize="@dimen/twinty_five_dp" />
 
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_lock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/meditate_theـevening"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/twinty_five_dp" />
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="@string/hoping_for_the_intellectual"
+                android:textAlignment="center"
+                android:textColor="@color/whiteColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twinty_five_dp"
+                android:text="@string/five_minute"
+                android:textAlignment="center"
+                android:textColor="@color/whiteColor"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_rhomb_outline" />
+
+    </FrameLayout>
 
     <Button
         android:id="@+id/profileButton"

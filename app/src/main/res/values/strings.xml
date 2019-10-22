@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Tawazon</string>
     <string name="breathe_and_start_again">تنفس وابدأ من جديد</string>
+    <string name="meditate_theـevening">تأمل المساء</string>
+    <string name="hoping_for_the_intellectual">تأمل للإسترخاء الفكري والجسدي للأطفال والنو...</string>
+    <string name="five_minute">5 دقائق</string>
 </resources>
