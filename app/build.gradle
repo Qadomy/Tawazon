@@ -34,4 +34,8 @@ dependencies {
 
     // GIF images
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+
+
+    // animation activty
+    implementation 'com.github.hajiyevelnur92:intentanimation:1.0'
 }

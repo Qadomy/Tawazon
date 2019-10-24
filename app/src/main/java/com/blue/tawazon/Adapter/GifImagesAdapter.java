@@ -13,7 +13,7 @@ import com.blue.tawazon.R;
 
 import pl.droidsonroids.gif.GifImageView;
 
-public class CustomSwipAdapter extends PagerAdapter {
+public class GifImagesAdapter extends PagerAdapter {
 
 
     private int[] images_resource = {
@@ -25,7 +25,7 @@ public class CustomSwipAdapter extends PagerAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public CustomSwipAdapter(Context context) {
+    public GifImagesAdapter(Context context) {
         this.context = context;
     }
 

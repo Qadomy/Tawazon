@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abril_fatface</item>
+        <item>@font/aclonica</item>
+        <item>@font/aldrich</item>
+        <item>@font/alegreya_bold_italic</item>
+        <item>@font/alfa_slab_one</item>
+        <item>@font/arbutus</item>
+        <item>@font/audiowide</item>
+        <item>@font/hind_guntur_semibold</item>
+        <item>@font/secular_one</item>
+    </array>
+</resources>
