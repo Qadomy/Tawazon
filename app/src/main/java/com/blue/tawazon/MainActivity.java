@@ -11,8 +11,8 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
 import com.blue.tawazon.Adapter.FragmentPagesAdapter;
@@ -33,21 +33,13 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mBottomNavigationView;
     private FrameLayout frameLayout;
     private Button profileButton;
+    private CardView soundMenu;
 
-//    // fragments
-    private final Fragment homeFragment = new FragmentHome();
-    private final Fragment soulFragment = new FragmentSoul();
-    private final Fragment meditationFragment = new FragmentMeditation();
-    private final Fragment bodyFragment = new FragmentBody();
-    private final Fragment kidsFragment = new FragmentKids();
-
-    private final FragmentManager fm = getSupportFragmentManager();
-    private Fragment active = homeFragment;
-
-
+    // ***
 
     private GifImagesAdapter adapter;
     private ViewPager viewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,21 +48,27 @@ public class MainActivity extends AppCompatActivity {
 
         mBottomNavigationView = findViewById(R.id.bottomnavigation);
 
-        // init profile button
+        // init profile button, and when click on profile button
         profileButton = findViewById(R.id.profileButton);
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, ProfileButton.class);
+                Intent i = new Intent(MainActivity.this, ProfileButtonActivity.class);
                 startActivity(i);
-                customType(MainActivity.this,"bottom-to-up");
+                customType(MainActivity.this, "bottom-to-up");
             }
         });
 
-//        mViewPager = findViewById(R.id.homeViewPager);
-        //setupViewPager(mViewPager);
+        soundMenu = findViewById(R.id.soundMenuButton);
+        soundMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, SoundsMenuActivity.class);
+                startActivity(i);
+                customType(MainActivity.this, "bottom-to-up");
+            }
+        });
 
-        //frameLayout = findViewById(R.id.frameLayout);
 
         //setFragment(new FragmentHome());
         addListener(); // add bottom navigator view buttons
@@ -87,22 +85,14 @@ public class MainActivity extends AppCompatActivity {
     // when click on menu button to open dialog
     public void openMenuDialog(View view) {
 
-        // get layout_add_new_electronic_item.xml view
         LayoutInflater li = LayoutInflater.from(MainActivity.this);
-        View promptsView = li.inflate(R.layout.layout_sounds_menu, null);
-
+        View promptsView = li.inflate(R.layout.activity_sounds_menu, null);
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
-
-        // set layout_add_new_electronic_item.xml to alert dialog builder
         alertDialogBuilder.setView(promptsView);
 
-        // create alert dialog
+        // create alert dialog and show it
         AlertDialog alertDialog = alertDialogBuilder.create();
-
-        // show it
         alertDialog.show();
-        //  finish();
-
     }
 
     public void openF(View view) {
@@ -119,57 +109,29 @@ public class MainActivity extends AppCompatActivity {
 
                 //Fragment selectedFragment = null;
 
-                switch (menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
                     case R.id.home_icon:
-//                        mViewPager.setCurrentItem(0);
-//                        setFragment(fragmentHome);
-//                        selectedFragment = new FragmentHome();
-
-//                        menuItem.setIconTintList()
-                        fm.beginTransaction().hide(active).show(homeFragment).commit();
-                        active = homeFragment;
                         return true;
 
                     case R.id.body_icon:
-//                        mViewPager.setCurrentItem(1);
-//                        setFragment(fragmentBody);
-//                        selectedFragment = new FragmentBody();
-                        fm.beginTransaction().hide(active).show(bodyFragment).commit();
-                        active = bodyFragment;
                         return true;
 
                     case R.id.meditation_icon:
-//                        mViewPager.setCurrentItem(2);
-//                        setFragment(fragmentMeditation);
-//                        selectedFragment = new FragmentMeditation();
-                        fm.beginTransaction().hide(active).show(meditationFragment).commit();
-                        active = meditationFragment;
                         return true;
 
                     case R.id.soul_icon:
-//                        mViewPager.setCurrentItem(3);
-//                        setFragment(fragmentSoul);
-//                        selectedFragment = new FragmentSoul();
-                        fm.beginTransaction().hide(active).show(soulFragment).commit();
-                        active = soulFragment;
                         return true;
 
                     case R.id.kids_icon:
-//                        mViewPager.setCurrentItem(4);
-//                        setFragment(fragmentKids);
-//                        selectedFragment = new FragmentKids();
-                        fm.beginTransaction().hide(active).show(kidsFragment).commit();
-                        active = kidsFragment;
                         return true;
                 }
-//                return setFragment(selectedFragment);
                 return false;
             }
         });
     }// end add listener
 
     private boolean setFragment(Fragment fragment) {
-        if (fragment != null){
+        if (fragment != null) {
 
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.frameLayout, fragment)
@@ -179,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
-
 
     // method for add the all fragments in the view pager
     private void setupViewPager(ViewPager viewPager) {

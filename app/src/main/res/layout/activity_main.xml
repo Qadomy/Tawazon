@@ -6,36 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/menuButton"
-        android:onClick="openMenuDialog"
-        android:layout_width="@dimen/twinty_five_dp"
-        android:layout_height="@dimen/twinty_five_dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/soundMenuButton"
+        android:layout_width="@dimen/fifty_dp"
+        android:layout_height="@dimen/fifty_dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/ic_menu"
-        tools:ignore="RtlHardcoded" />
+        app:cardCornerRadius="360dp"
+        app:cardBackgroundColor="#474444"
+        tools:ignore="RtlHardcoded">
 
-<!--    <com.jackandphantom.circularimageview.RoundedImage-->
-<!--        android:id="@+id/menuButton"-->
-<!--        android:layout_width="@dimen/twinty_five_dp"-->
-<!--        android:layout_height="@dimen/twinty_five_dp"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentLeft="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:layout_marginLeft="20dp"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:src="@drawable/ic_menu"-->
-<!--        app:border_color="#ed2e2e"-->
-<!--        app:add_shadow="true"-->
-<!--        app:shadow_color="#fff"-->
-<!--        app:shadow_radius="20"-->
-<!--        tools:ignore="RtlHardcoded" />-->
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="@dimen/twinty_five_dp"
+            android:layout_height="@dimen/twinty_five_dp"
+            android:background="@drawable/ic_menu"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.cardview.widget.CardView>
 
     <!--    this view pager for swipe GIF images in the screen-->
     <androidx.viewpager.widget.ViewPager
@@ -77,8 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="openF">
+        android:layout_centerVertical="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -127,18 +118,32 @@
 
     </FrameLayout>
 
-    <Button
-        android:id="@+id/profileButton"
-        android:layout_width="@dimen/twinty_five_dp"
-        android:layout_height="@dimen/twinty_five_dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/fifty_dp"
+        android:layout_height="@dimen/fifty_dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/ic_profile"
-        tools:ignore="RtlHardcoded" />
+        app:cardBackgroundColor="#474444"
+        app:cardCornerRadius="360dp"
+        android:elevation="0dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        tools:ignore="RtlHardcoded">
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="@dimen/twinty_five_dp"
+            android:layout_height="@dimen/twinty_five_dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_profile"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.cardview.widget.CardView>
+
+
 
     <!--todo: put the name with icons-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
