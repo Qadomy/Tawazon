@@ -9,9 +9,6 @@
                 <size
                     android:width="200dp"
                     android:height="200dp" />
-                <!--   <gradient
-                       android:startColor="#FFFFFF"
-                       android:endColor="#FFFFFF" />-->
                 <stroke
                     android:width="2dp"
                     android:color="#FFFFFF" />

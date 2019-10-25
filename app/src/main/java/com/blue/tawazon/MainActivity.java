@@ -103,8 +103,8 @@ public class MainActivity extends AppCompatActivity {
 //                        mViewPager.setCurrentItem(0);
 //                        setFragment(fragmentHome);
 //                        selectedFragment = new FragmentHome();
-                        menuItem.setIcon(R.drawable.ic_bird);
 
+//                        menuItem.setIconTintList()
                         fm.beginTransaction().hide(active).show(homeFragment).commit();
                         active = homeFragment;
                         return true;

@@ -6,18 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--&lt;!&ndash;    this view pager for swip fragments&ndash;&gt;-->
-<!--    <androidx.viewpager.widget.ViewPager-->
-<!--        android:id="@+id/activityViewPager"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:background="#885C5C" />-->
-
-
     <Button
         android:id="@+id/menuButton"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="@dimen/twinty_five_dp"
+        android:layout_height="@dimen/twinty_five_dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -27,97 +19,21 @@
         android:background="@drawable/ic_menu"
         tools:ignore="RtlHardcoded" />
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/linearLayout1"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
+<!--    <com.jackandphantom.circularimageview.RoundedImage-->
+<!--        android:id="@+id/menuButton"-->
+<!--        android:layout_width="@dimen/twinty_five_dp"-->
+<!--        android:layout_height="@dimen/twinty_five_dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentLeft="true"-->
 <!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_marginTop="25dp"-->
-<!--        android:gravity="center"-->
-<!--        android:orientation="vertical"-->
-<!--        tools:ignore="RelativeOverlap,UseCompoundDrawables">-->
-
-<!--        <ImageView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/ic_bird" />-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="@dimen/five_dp"-->
-<!--            android:text="@string/breathe_and_start_again"-->
-<!--            android:textColor="@color/whiteColor"-->
-<!--            android:textSize="@dimen/twinty_five_dp" />-->
-
-<!--    </LinearLayout>-->
-
-<!--    <FrameLayout-->
-<!--        android:id="@+id/frameLayout"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_centerVertical="true"-->
-<!--        android:onClick="openF">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:gravity="center"-->
-<!--            android:orientation="vertical">-->
-
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/ic_lock" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:text="@string/meditate_theـevening"-->
-<!--                android:textColor="@color/whiteColor"-->
-<!--                android:textSize="@dimen/twinty_five_dp" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="170dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/hoping_for_the_intellectual"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="@color/whiteColor"-->
-<!--                android:textSize="15sp" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="@dimen/twinty_five_dp"-->
-<!--                android:text="@string/five_minute"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="@color/whiteColor"-->
-<!--                android:textSize="15sp" />-->
-
-<!--        </LinearLayout>-->
-
-<!--        <ImageView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/ic_rhomb_outline" />-->
-
-<!--    </FrameLayout>-->
-
-<!--    <Button-->
-<!--        android:id="@+id/profileButton"-->
-<!--        android:layout_width="35dp"-->
-<!--        android:layout_height="35dp"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginLeft="20dp"-->
 <!--        android:layout_marginTop="40dp"-->
-<!--        android:layout_marginEnd="20dp"-->
-<!--        android:layout_marginRight="20dp"-->
-<!--        android:background="@drawable/ic_profile"-->
+<!--        android:src="@drawable/ic_menu"-->
+<!--        app:border_color="#ed2e2e"-->
+<!--        app:add_shadow="true"-->
+<!--        app:shadow_color="#fff"-->
+<!--        app:shadow_radius="20"-->
 <!--        tools:ignore="RtlHardcoded" />-->
 
     <!--    this view pager for swipe GIF images in the screen-->
@@ -212,8 +128,8 @@
 
     <Button
         android:id="@+id/profileButton"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="@dimen/twinty_five_dp"
+        android:layout_height="@dimen/twinty_five_dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
@@ -233,7 +149,9 @@
         android:layout_marginRight="20dp"
         app:itemIconTint="@color/whiteColor"
         app:itemTextColor="@color/whiteColor"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_bottom_navigation" />
+
 
 
 </RelativeLayout>
