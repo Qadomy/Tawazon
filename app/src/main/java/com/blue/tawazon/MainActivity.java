@@ -2,12 +2,14 @@ package com.blue.tawazon;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -62,8 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this, ProfileButton.class);
                 startActivity(i);
                 customType(MainActivity.this,"bottom-to-up");
-
-
             }
         });
 
@@ -81,6 +81,27 @@ public class MainActivity extends AppCompatActivity {
 
         // set the images in view pager
         viewPager.setAdapter(adapter);
+
+    }
+
+    // when click on menu button to open dialog
+    public void openMenuDialog(View view) {
+
+        // get layout_add_new_electronic_item.xml view
+        LayoutInflater li = LayoutInflater.from(MainActivity.this);
+        View promptsView = li.inflate(R.layout.layout_sounds_menu, null);
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+
+        // set layout_add_new_electronic_item.xml to alert dialog builder
+        alertDialogBuilder.setView(promptsView);
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
+        //  finish();
 
     }
 
@@ -174,5 +195,6 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(sectionPagesAdapter);
     }
+
 
 }
