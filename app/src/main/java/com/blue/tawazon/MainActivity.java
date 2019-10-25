@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, SoundsMenuActivity.class);
                 startActivity(i);
-                customType(MainActivity.this, "bottom-to-up");
+                customType(MainActivity.this, "fadein-to-fadeout");
             }
         });
 

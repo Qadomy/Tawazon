@@ -5,6 +5,7 @@
     android:id="@+id/soundItemCardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/twinty_five_dp"
     app:cardBackgroundColor="@color/blackColor">
 
 
