@@ -24,7 +24,7 @@ public class ProfileButtonActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(ProfileButtonActivity.this, MainActivity.class);
                 startActivity(i);
-                customType(ProfileButtonActivity.this,"up-to-bottom");
+                overridePendingTransition(R.anim.activity, R.anim.bottom_down);
             }
         });
 
