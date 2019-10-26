@@ -8,6 +8,9 @@
         <item>@font/alfa_slab_one</item>
         <item>@font/arbutus</item>
         <item>@font/audiowide</item>
+        <item>@font/cairo</item>
+        <item>@font/cairo_bold</item>
+        <item>@font/cairo_extralight</item>
         <item>@font/hind_guntur_semibold</item>
         <item>@font/secular_one</item>
     </array>

@@ -8,18 +8,18 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/soundMenuButton"
-        android:layout_width="@dimen/fifty_dp"
-        android:layout_height="@dimen/fifty_dp"
+        android:layout_width="@dimen/forty_dp"
+        android:layout_height="@dimen/forty_dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/twinty_five_dp"
         android:elevation="0dp"
         android:onClick="openSoundsMenu"
         app:cardBackgroundColor="#474444"
-        app:cardCornerRadius="@dimen/twinty_five_dp"
+        app:cardCornerRadius="@dimen/twinty_dp"
         tools:ignore="RtlHardcoded">
 
         <Button
@@ -46,7 +46,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="25dp"
         android:gravity="center"
         android:orientation="vertical"
         tools:ignore="RelativeOverlap,UseCompoundDrawables">
@@ -54,17 +53,16 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_bird" />
+            android:background="@drawable/ic_eagle" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/five_dp"
-            android:fontFamily="@font/arbutus"
+            android:fontFamily="@font/cairo"
             android:includeFontPadding="false"
             android:text="@string/breathe_and_start_again"
             android:textColor="@color/whiteColor"
-            android:textSize="@dimen/twinty_five_dp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -91,14 +89,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/twinty_five_dp"
+                android:fontFamily="@font/cairo"
                 android:text="@string/meditate_theـevening"
                 android:textColor="@color/whiteColor"
-                android:textSize="@dimen/twinty_five_dp" />
+                android:textSize="25sp"
+                android:textStyle="normal" />
 
             <TextView
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/cairo"
                 android:text="@string/hoping_for_the_intellectual"
                 android:textAlignment="center"
                 android:textColor="@color/whiteColor"
@@ -107,7 +108,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/twinty_five_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:fontFamily="@font/cairo"
+
                 android:text="@string/five_minute"
                 android:textAlignment="center"
                 android:textColor="@color/whiteColor"
@@ -123,18 +126,18 @@
     </FrameLayout>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/fifty_dp"
-        android:layout_height="@dimen/fifty_dp"
+        android:layout_width="@dimen/forty_dp"
+        android:layout_height="@dimen/forty_dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/twinty_five_dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:elevation="0dp"
         android:onClick="openProfileMenu"
         app:cardBackgroundColor="#474444"
-        app:cardCornerRadius="@dimen/twinty_five_dp"
+        app:cardCornerRadius="@dimen/twinty_dp"
         tools:ignore="RtlHardcoded">
 
         <Button
