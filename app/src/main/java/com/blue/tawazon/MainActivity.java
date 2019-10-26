@@ -29,9 +29,7 @@ import static maes.tech.intentanim.CustomIntent.customType;
 public class MainActivity extends AppCompatActivity {
 
     private FragmentPagesAdapter sectionPagesAdapter;
-    private ViewPager mViewPager;
     private BottomNavigationView mBottomNavigationView;
-    private FrameLayout frameLayout;
     private Button profileButton;
     private CardView soundMenu;
 

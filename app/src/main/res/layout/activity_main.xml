@@ -16,8 +16,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        app:cardCornerRadius="360dp"
+        android:elevation="0dp"
         app:cardBackgroundColor="#474444"
+        app:cardCornerRadius="@dimen/twinty_five_dp"
         tools:ignore="RtlHardcoded">
 
         <Button
@@ -28,6 +29,8 @@
             tools:ignore="RtlHardcoded" />
 
     </androidx.cardview.widget.CardView>
+
+
 
     <!--    this view pager for swipe GIF images in the screen-->
     <androidx.viewpager.widget.ViewPager
@@ -128,9 +131,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         app:cardBackgroundColor="#474444"
-        app:cardCornerRadius="360dp"
+        app:cardCornerRadius="@dimen/twinty_five_dp"
         android:elevation="0dp"
-        android:foreground="?android:attr/selectableItemBackground"
         tools:ignore="RtlHardcoded">
 
         <Button
