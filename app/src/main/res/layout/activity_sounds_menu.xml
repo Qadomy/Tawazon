@@ -39,7 +39,7 @@
                     tools:ignore="RtlHardcoded" />
 
                 <Button
-                    android:id="@+id/profileButton"
+                    android:id="@+id/musicOn"
                     android:layout_width="@dimen/twinty_five_dp"
                     android:layout_height="@dimen/twinty_five_dp"
                     android:layout_alignParentTop="true"
@@ -48,6 +48,19 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginRight="20dp"
                     android:background="@drawable/ic_music"
+                    tools:ignore="RtlHardcoded" />
+
+                <Button
+                    android:id="@+id/musicOff"
+                    android:layout_width="@dimen/twinty_five_dp"
+                    android:layout_height="@dimen/twinty_five_dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:background="@drawable/ic_no_music"
                     tools:ignore="RtlHardcoded" />
 
             </RelativeLayout>

@@ -3,6 +3,7 @@ package com.blue.tawazon;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,6 +21,9 @@ public class SoundsMenuActivity extends AppCompatActivity {
     private SoundMenuAdapter soundMenuAdapter;
     private ArrayList<SoundItem> soundItems = new ArrayList<>();
 
+    // ***
+    private Button musicON, musicOFF;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,25 @@ public class SoundsMenuActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_sounds_menu);
         this.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+
+        musicON = findViewById(R.id.musicOn);
+        musicOFF = findViewById(R.id.musicOff);
+
+        musicON.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                musicON.setVisibility(View.GONE);
+                musicOFF.setVisibility(View.VISIBLE);
+            }
+        });
+
+        musicOFF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                musicOFF.setVisibility(View.GONE);
+                musicON.setVisibility(View.VISIBLE);
+            }
+        });
 
         // init RecyclerView
         displaySoundItemsRecyclerView = findViewById(R.id.recyclerViewSoundItems);
