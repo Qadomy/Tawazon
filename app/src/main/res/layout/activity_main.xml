@@ -17,6 +17,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
         android:elevation="0dp"
+        android:onClick="openSoundsMenu"
         app:cardBackgroundColor="#474444"
         app:cardCornerRadius="@dimen/twinty_five_dp"
         tools:ignore="RtlHardcoded">
@@ -26,6 +27,7 @@
             android:layout_height="@dimen/twinty_five_dp"
             android:layout_gravity="center"
             android:background="@drawable/ic_menu"
+            android:onClick="openSoundsMenu"
             tools:ignore="RtlHardcoded" />
 
     </androidx.cardview.widget.CardView>
@@ -130,16 +132,17 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:elevation="0dp"
+        android:onClick="openProfileMenu"
         app:cardBackgroundColor="#474444"
         app:cardCornerRadius="@dimen/twinty_five_dp"
         tools:ignore="RtlHardcoded">
 
         <Button
-            android:id="@+id/profileButton"
             android:layout_width="@dimen/twinty_five_dp"
             android:layout_height="@dimen/twinty_five_dp"
             android:layout_gravity="center"
             android:background="@drawable/ic_profile"
+            android:onClick="openProfileMenu"
             tools:ignore="RtlHardcoded" />
 
     </androidx.cardview.widget.CardView>

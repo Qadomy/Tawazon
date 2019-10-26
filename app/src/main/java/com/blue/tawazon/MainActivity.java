@@ -5,13 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
@@ -24,14 +21,11 @@ import com.blue.tawazon.Fragments.FragmentMeditation;
 import com.blue.tawazon.Fragments.FragmentSoul;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import static maes.tech.intentanim.CustomIntent.customType;
 
 public class MainActivity extends AppCompatActivity {
 
     private FragmentPagesAdapter sectionPagesAdapter;
     private BottomNavigationView mBottomNavigationView;
-    private Button profileButton;
-    private CardView soundMenu;
 
     // ***
 
@@ -46,32 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         mBottomNavigationView = findViewById(R.id.bottomnavigation);
 
-        // init profile button, and when click on profile button
-        profileButton = findViewById(R.id.profileButton);
-        profileButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, ProfileButtonActivity.class);
-                startActivity(i);
-//                customType(MainActivity.this, "bottom-to-up");
-                overridePendingTransition(R.anim.bottom_up, R.anim.activity);
-            }
-        });
-
-        soundMenu = findViewById(R.id.soundMenuButton);
-        soundMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, SoundsMenuActivity.class);
-                startActivity(i);
-                customType(MainActivity.this, "fadein-to-fadeout");
-            }
-        });
-
 
         //setFragment(new FragmentHome());
         addListener(); // add bottom navigator view buttons
-
 
         viewPager = findViewById(R.id.homeViewPager);
         adapter = new GifImagesAdapter(this);
@@ -157,4 +128,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    // when click on profile menu button
+    public void openProfileMenu(View view) {
+        Intent i = new Intent(MainActivity.this, ProfileButtonActivity.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.bottom_up, R.anim.activity);
+    }
+
+    // when click on sounds menu button
+    public void openSoundsMenu(View view) {
+        Intent i = new Intent(MainActivity.this, SoundsMenuActivity.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+    }
 }

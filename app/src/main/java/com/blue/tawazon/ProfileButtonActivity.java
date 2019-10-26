@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import static maes.tech.intentanim.CustomIntent.customType;
 
 public class ProfileButtonActivity extends AppCompatActivity {
 
