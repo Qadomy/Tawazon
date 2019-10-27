@@ -2,6 +2,7 @@ package com.blue.tawazon.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.util.DisplayMetrics;
@@ -30,6 +31,7 @@ public class VideoPlayerAdapter extends PagerAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
 
+
     public VideoPlayerAdapter(Context context) {
         this.context = context;
     }
@@ -38,8 +40,6 @@ public class VideoPlayerAdapter extends PagerAdapter {
     public int getCount() {
         return videoResource.length;
     }
-
-
 
 
     @NonNull
@@ -62,7 +62,6 @@ public class VideoPlayerAdapter extends PagerAdapter {
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
 
-
                 mediaPlayer.setLooping(true);
 
                 // here for display the video in full screen
@@ -74,16 +73,18 @@ public class VideoPlayerAdapter extends PagerAdapter {
                 params.leftMargin = 0;
                 video_player_view.setLayoutParams(params);
 
+
                 // start video
                 video_player_view.start();
             }
         });
 
+        //todo
         video_player_view.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
                 video_player_view.seekTo(1);
-//                video_player_view.resume();
+                video_player_view.setBackgroundColor(Color.TRANSPARENT);
             }
         });
 

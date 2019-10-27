@@ -151,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
 
     // when click on profile menu button
     public void openProfileMenu(View view) {
+//        mBottomNavigationView.setVisibility(View.GONE);
         Intent i = new Intent(MainActivity.this, ProfileButtonActivity.class);
         startActivity(i);
         overridePendingTransition(R.anim.bottom_up, R.anim.activity);

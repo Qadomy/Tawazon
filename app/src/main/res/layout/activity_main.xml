@@ -70,7 +70,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        tools:ignore="RelativeOverlap">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -82,7 +83,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_lock" />
+                android:background="@drawable/ic_lock"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -109,7 +111,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/five_dp"
                 android:fontFamily="@font/cairo"
-
                 android:text="@string/five_minute"
                 android:textAlignment="center"
                 android:textColor="@color/whiteColor"
@@ -120,7 +121,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_rhomb_outline" />
+            android:background="@drawable/ic_rhomb_outline"
+            tools:ignore="ContentDescription" />
 
     </FrameLayout>
 

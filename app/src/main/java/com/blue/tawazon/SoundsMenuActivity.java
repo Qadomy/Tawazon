@@ -31,6 +31,7 @@ public class SoundsMenuActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // here to hide the title of app name over activity when display at dialog
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_sounds_menu);
         this.getWindow().setBackgroundDrawableResource(android.R.color.transparent);

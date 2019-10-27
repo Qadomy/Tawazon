@@ -12,10 +12,13 @@
         <activity
             android:name=".SoundsMenuActivity"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"
-            />
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
 
-        <activity android:name=".ProfileButtonActivity"></activity>
+        <activity
+            android:name=".ProfileButtonActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+
         <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
