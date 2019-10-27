@@ -13,25 +13,27 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.blue.tawazon.Adapter.FragmentPagesAdapter;
-import com.blue.tawazon.Adapter.GifImagesAdapter;
+import com.blue.tawazon.Adapter.VideoPlayerAdapter;
 import com.blue.tawazon.Fragments.FragmentBody;
 import com.blue.tawazon.Fragments.FragmentHome;
 import com.blue.tawazon.Fragments.FragmentKids;
 import com.blue.tawazon.Fragments.FragmentMeditation;
 import com.blue.tawazon.Fragments.FragmentSoul;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private FragmentPagesAdapter sectionPagesAdapter;
     private BottomNavigationView mBottomNavigationView;
+    private TabLayout tabLayout;
 
     // ***
 
-    private GifImagesAdapter adapter;
     private ViewPager viewPager;
 
+    private VideoPlayerAdapter playerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +42,27 @@ public class MainActivity extends AppCompatActivity {
 
         mBottomNavigationView = findViewById(R.id.bottomnavigation);
 
-
-        //setFragment(new FragmentHome());
         addListener(); // add bottom navigator view buttons
 
         viewPager = findViewById(R.id.homeViewPager);
-        adapter = new GifImagesAdapter(this);
+
+        playerAdapter = new VideoPlayerAdapter(this);
 
         // set the images in view pager
-        viewPager.setAdapter(adapter);
+        viewPager.setAdapter(playerAdapter);
 
+
+        tabLayout = findViewById(R.id.tabDots);
+        tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.setEnabled(false);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        viewPager.setAdapter(playerAdapter);
     }
 
     // when click on menu button to open dialog
@@ -133,12 +146,14 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, ProfileButtonActivity.class);
         startActivity(i);
         overridePendingTransition(R.anim.bottom_up, R.anim.activity);
+
     }
 
     // when click on sounds menu button
     public void openSoundsMenu(View view) {
         Intent i = new Intent(MainActivity.this, SoundsMenuActivity.class);
         startActivity(i);
+//        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
     }

@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/fifty_dp"
+    android:layout_marginTop="@dimen/twinty_five_dp"
+    android:layout_marginBottom="@dimen/twinty_five_dp"
     android:background="@drawable/layout_pg"
     tools:context=".SoundsMenuActivity">
 
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardBackgroundColor="@android:color/transparent"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="30dp"
         app:cardElevation="0dp"
         app:layout_constraintCircleRadius="@dimen/fifty_dp">
 
@@ -32,9 +33,9 @@
                     android:layout_height="@dimen/twinty_five_dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
                     android:background="@drawable/ic_menu"
                     tools:ignore="RtlHardcoded" />
 
@@ -44,9 +45,9 @@
                     android:layout_height="@dimen/twinty_five_dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/ten_dp"
+                    android:layout_marginRight="@dimen/ten_dp"
                     android:background="@drawable/ic_music"
                     tools:ignore="RtlHardcoded" />
 
@@ -56,9 +57,9 @@
                     android:layout_height="@dimen/twinty_five_dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/ten_dp"
+                    android:layout_marginRight="@dimen/ten_dp"
                     android:visibility="gone"
                     android:background="@drawable/ic_no_music"
                     tools:ignore="RtlHardcoded" />

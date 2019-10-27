@@ -9,13 +9,12 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.blue.tawazon.Adapter.GifImagesAdapter;
 import com.blue.tawazon.Main2Activity;
 import com.blue.tawazon.R;
 
 public class FragmentHome extends Fragment {
 
-    private GifImagesAdapter adapter;
+    //private GifImagesAdapter adapter;
     private ViewPager viewPager;
 
     public FragmentHome() {
@@ -34,10 +33,10 @@ public class FragmentHome extends Fragment {
 
         // init View Pager
         viewPager = view.findViewById(R.id.homeViewPager);
-        adapter = new GifImagesAdapter(getActivity());
+        //adapter = new GifImagesAdapter(getActivity());
 
         // set the images in view pager
-        viewPager.setAdapter(adapter);
+        //viewPager.setAdapter(adapter);
 
         return view;
     }

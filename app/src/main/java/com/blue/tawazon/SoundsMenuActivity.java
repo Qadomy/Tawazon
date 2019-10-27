@@ -1,11 +1,13 @@
 package com.blue.tawazon;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,7 +16,7 @@ import com.blue.tawazon.Classes.SoundItem;
 
 import java.util.ArrayList;
 
-public class SoundsMenuActivity extends AppCompatActivity {
+public class SoundsMenuActivity extends Activity {
 
     // here for display the sound items when open sound menu
     private RecyclerView displaySoundItemsRecyclerView;
