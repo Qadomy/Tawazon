@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -44,20 +46,26 @@ public class MainActivity extends AppCompatActivity {
 
         addListener(); // add bottom navigator view buttons
 
-        viewPager = findViewById(R.id.homeViewPager);
 
         playerAdapter = new VideoPlayerAdapter(this);
 
-        // set the images in view pager
+        viewPager = findViewById(R.id.homeViewPager);
         viewPager.setAdapter(playerAdapter);
 
 
         tabLayout = findViewById(R.id.tabDots);
-        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager, true);
 
-        tabLayout.setEnabled(false);
+        // here to disable to click on indicators
+        tabLayout.clearOnTabSelectedListeners();
+        for (View v : tabLayout.getTouchables()) {
+            v.setEnabled(false);
+        }
 
-    }
+
+    }// end of onCreate
+
+
 
     @Override
     protected void onStart() {
