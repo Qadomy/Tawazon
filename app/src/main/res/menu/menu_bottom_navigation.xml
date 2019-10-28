@@ -6,34 +6,34 @@
         android:id="@+id/home_icon"
         android:checked="true"
         android:icon="@drawable/ic_home"
-        android:title="الرئيسية"
+        android:title="@string/home"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/body_icon"
         android:checked="true"
         android:icon="@drawable/ic_body"
-        android:title="جسدي"
+        android:title="@string/body"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/meditation_icon"
         android:checked="true"
         android:icon="@drawable/ic_meditation"
-        android:title="تأملات"
+        android:title="@string/meditation"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/soul_icon"
         android:checked="true"
         android:icon="@drawable/ic_soul"
-        android:title="روحي"
+        android:title="@string/soul"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/kids_icon"
         android:checked="true"
         android:icon="@drawable/ic_kids"
-        android:title="الأطفال"
+        android:title="@string/kids"
         app:showAsAction="ifRoom" />
 </menu>

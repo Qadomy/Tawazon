@@ -2,9 +2,11 @@ package com.blue.tawazon;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -95,8 +97,9 @@ public class MainActivity extends AppCompatActivity {
         mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                // here to remove the white color before change icon
+                mBottomNavigationView.setItemIconTintList(null);
 
-                //Fragment selectedFragment = null;
 
                 switch (menuItem.getItemId()) {
                     case R.id.home_icon:

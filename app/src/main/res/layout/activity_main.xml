@@ -135,8 +135,8 @@
         android:layout_marginTop="@dimen/twinty_five_dp"
         app:tabBackground="@drawable/tab_selector"
         app:tabGravity="center"
-        app:tabPaddingBottom="@dimen/ten_dp"
-        app:tabIndicatorHeight="0dp" />
+        app:tabIndicatorHeight="0dp"
+        app:tabPaddingBottom="@dimen/ten_dp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/forty_dp"
@@ -169,8 +169,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:textAlignment="center"
+        android:theme="@style/Theme.AppCompat.Light"
+        app:itemIconSize="@dimen/twinty_five_dp"
         app:itemIconTint="@color/whiteColor"
         app:itemTextColor="@color/whiteColor"
         app:labelVisibilityMode="labeled"
