@@ -135,6 +135,7 @@
         android:layout_marginTop="@dimen/twinty_five_dp"
         app:tabBackground="@drawable/tab_selector"
         app:tabGravity="center"
+        app:tabPaddingBottom="@dimen/ten_dp"
         app:tabIndicatorHeight="0dp" />
 
     <androidx.cardview.widget.CardView

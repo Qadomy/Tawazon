@@ -35,5 +35,12 @@ public class ProfileButtonActivity extends Activity {
             }
         });
 
+    }// end of onCreate
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        finish();
     }
 }

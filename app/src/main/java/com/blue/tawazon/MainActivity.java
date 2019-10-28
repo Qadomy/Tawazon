@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -102,18 +100,23 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (menuItem.getItemId()) {
                     case R.id.home_icon:
+                        menuItem.setIcon(R.drawable.bottom_navigation_home_click);
                         return true;
 
                     case R.id.body_icon:
+                        menuItem.setIcon(R.drawable.bottom_navigation_body_click);
                         return true;
 
                     case R.id.meditation_icon:
+                        menuItem.setIcon(R.drawable.bottom_navigation_meditation_click);
                         return true;
 
                     case R.id.soul_icon:
+                        menuItem.setIcon(R.drawable.bottom_navigation_soul_click);
                         return true;
 
                     case R.id.kids_icon:
+                        menuItem.setIcon(R.drawable.bottom_navigation_kids_click);
                         return true;
                 }
                 return false;
@@ -162,7 +165,6 @@ public class MainActivity extends AppCompatActivity {
     public void openSoundsMenu(View view) {
         Intent i = new Intent(MainActivity.this, SoundsMenuActivity.class);
         startActivity(i);
-//        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
     }

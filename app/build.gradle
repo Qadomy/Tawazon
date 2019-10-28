@@ -32,16 +32,11 @@ dependencies {
     // material BottomNavigationView
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.eightbitlab:bottomnavigationbar:0.9.6'
-
-    // GIF images
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+//    implementation 'com.google.android.material:material:1.2.0-alpha01'
 
 
     // animation activity
     implementation 'com.github.hajiyevelnur92:intentanimation:1.0'
-
-
-    implementation 'androidx.cardview:cardview:1.0.0'
 
 
 }
