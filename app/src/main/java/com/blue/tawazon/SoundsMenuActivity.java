@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.appcompat.app.AlertDialog;
@@ -35,6 +36,8 @@ public class SoundsMenuActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_sounds_menu);
         this.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        this.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT); // to display the activity as full screen dialog
 
         musicON = findViewById(R.id.musicOn);
         musicOFF = findViewById(R.id.musicOff);
